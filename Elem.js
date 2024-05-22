@@ -2,8 +2,10 @@ export default class Elem{
     #ertek=""
     #szuloElem;
     constructor(ertek,szuloElem){
+        // beállítjuk az adattagokat
         this.#ertek = ertek;
         this.#szuloElem = szuloElem;
+        // fgv hívás(nem adattag...)
         this.#megjelenit();
     }
 

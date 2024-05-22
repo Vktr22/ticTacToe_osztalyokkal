@@ -13,4 +13,6 @@ main{
     border: 1px solid gray;
     aspect-ratio: 1;
     padding: 2px;
+    font-size: 30px;
+    text-align:center;
 }

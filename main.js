@@ -1,6 +1,3 @@
-import Elem from "./Elem.js";
-
-// példányosítjuk az Elem osztályt
-
-const szuloElem = $(".jatekter");
-const elem = new Elem("X",szuloElem);
+import JatekTer from "./JatekTer.js";
+// példányosítjuk a játékteret
+new JatekTer();
