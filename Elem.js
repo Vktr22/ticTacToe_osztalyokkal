@@ -19,8 +19,12 @@ export default class Elem{
 
         this.#divElem.on("click", ()=>{         //névtelen fgv-ként function-t használva, a this arra a html elemre mutat, amelyik kiváltotta az eseményt. Nyílfgv esetén a this a konkrét objektum példányra mutat.
             //nyílfgv esetén a konkrét objektum példányra mutat
-            console.log(this);
-            this.#trigger("kattintasom");
+            //console.log(this);
+            //csak akk tufjunk kattintani, ha még nincs benne érték
+            if(this.#ertek === " "){
+                this.#trigger("kattintasom");
+            }
+            
         })
     }
 
@@ -35,8 +39,8 @@ export default class Elem{
 
     //saját esemény létrehozása
     #trigger(esemenyNev){
-        //létrehozok egy új, saját eseményt
-        const e = CustomEvent(esemenyNev,{detail:this.#index})          //https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
+        //létrehozok egy új, saját eseményt                     /* https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent */
+        const e = new CustomEvent(esemenyNev,{detail:this.#index})
         //az eseményt elérhetővé teszem az egész programban
         window.dispatchEvent(e)
     }

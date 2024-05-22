@@ -7,6 +7,9 @@ export default class JatekTer{
         // példányosítjuk az Elem osztályt
         const szuloElem = $(".jatekter");
 
+        //kiürítem a játékteret
+        szuloElem.empty()
+
         for(let index = 0; index < this.#jatekLISTA.length; index++){
             const elem = new Elem(index, this.#jatekLISTA[index], szuloElem);
         }
