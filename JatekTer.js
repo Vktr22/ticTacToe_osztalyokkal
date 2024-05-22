@@ -8,7 +8,7 @@ export default class JatekTer{
         const szuloElem = $(".jatekter");
 
         for(let index = 0; index < this.#jatekLISTA.length; index++){
-            const elem = new Elem(this.#jatekLISTA[index],szuloElem);
+            const elem = new Elem(index, this.#jatekLISTA[index], szuloElem);
         }
     }
 }

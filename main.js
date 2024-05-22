@@ -8,3 +8,8 @@ let lepes = 0; // ha a lépésszámláló páros, akkor x következik, ha párat
 
 // példányosítjuk a játékteret
 new JatekTer(jatekLISTA);
+
+//feliratkozom a saját "kattintasom" eseményemre
+$(window).on("kattintasom",(event)=>{
+    console.log(event.detail)
+})
